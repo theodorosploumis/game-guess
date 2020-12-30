@@ -7,7 +7,7 @@ $bg_color = "white";
 $card_width = "280px";
 $border_color = "whitesmoke";
 
-$cards_number = 80;
+$cards_number = 84;
 $difficulty = 4;
 
 ?>
@@ -35,22 +35,21 @@ $difficulty = 4;
             .board {
                 display: flex;
                 flex-flow: wrap;
-                align-content: flex-start;
             }
 
             .card {
                 flex-grow: 1;
                 flex-shrink: 1;
                 /*text-align: center;*/
-                padding: 30px 10px;
+                padding: 20px 10px;
                 margin: 10px;
                 border-radius: 10px;
                 border: 1px solid var(--bg-color);
                 background: #f1ebdd;
                 width: var(--cell-width);
-                height: var(--cell-width);
+                height: 160px;
                 max-width: var(--cell-width);
-                max-height: var(--cell-width);
+                /*page-break-inside: avoid;*/
             }
         </style>
     </head>
