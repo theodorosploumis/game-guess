@@ -249,20 +249,33 @@ function GenerateTokens(int $number) {
         "green",
         "yellow",
         "black",
+        "purple",
+        "orange",
+        "brown",
     ];
 
-    foreach ($bg_colors as $color) {
-        print "<div style='width:100%;'></div>";
+    $players_arg = GetUrlArgument("players");
+    if (!$players_arg) {
+        $players_arg = "2";
+    }
 
-        for ($i = 0; $i <= $number; $i++) {
-            print GenerateSingleToken($color);
+    foreach ($bg_colors as $k => $color) {
+        if ($k < $players_arg) {
+            print "<div style='width:100%;'></div>";
+
+            for ($i = 1; $i <= $number; $i++) {
+                print GenerateSingleToken($color);
+            }
         }
     }
 }
 
 // Generate Cards
 function GenerateSingleCard($data) {
-    return '<div class="card">'. $data .'</div>';
+    $static = "";
+    $static .= "<div class='card-logo'><img src='./assets/logo.svg'></div>";
+
+    return '<div class="card">'. $static . $data .'</div>';
 }
 
 /**
@@ -273,13 +286,18 @@ function GenerateCards() {
     $actions_array = $actions;
 
     $cards = "";
-    foreach ($actions_array as $action_group) {
+    foreach ($actions_array as $label => $action_group) {
         foreach ($action_group as $k => $action) {
             $prefix = "Select a cell which ";
-            if ($action === "draw") {
+            if ($label === "draw") {
                 $prefix = "Draw ";
             }
-            $data = $prefix . $action;
+
+            $html_action = "<div class='card-action'><label>Action:</label>" . $prefix . $action ."</div>";
+            $html_type = "<div class='card-type type-".$label."' ><label>Type:</label>". $label ."</div>";
+            $html_copyright = "<div class='card-copyright'>&copy; Theodoros Ploumis 2021 - All rights reserved.</div>";
+
+            $data = $html_action . $html_type . $html_copyright;
             $cards .= GenerateSingleCard($data);
         }
     }

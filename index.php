@@ -65,6 +65,7 @@
             border: 3px solid #fff;
             box-shadow: 0 0 5px 0 #8a8a8a;
             border-radius: 5px;
+            cursor: pointer;
         }
 
         .option-card {
@@ -108,7 +109,18 @@
                 <a href="cards.php" class="option-board option-card" target="_blank">Generate Cards</a>
             </div>
             <div class="option">
-                <a href="tokens.php" class="option-board option-token" target="_blank">Generate Tokens</a>
+                <form class="form-option" action="tokens.php" target="_blank">
+                    <select name="players" id="players" class="select-clear">
+                        <option value="2">2 Players</option>
+                        <option value="3">3 Players</option>
+                        <option value="4">4 Players</option>
+                        <option value="5">5 Players</option>
+                        <option value="6">6 Players</option>
+                        <option value="7">7 Players</option>
+                        <option value="8">8 Players</option>
+                    </select>
+                    <input type="submit" class="option-board option-token" value="Generate Tokens">
+                </form>
             </div>
         </div>
         <hr>
