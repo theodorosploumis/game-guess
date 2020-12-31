@@ -1,6 +1,6 @@
 # Guess My Play
 
-![](assets/logo.png)
+![](assets/logo.svg)
 
 ## About
 - An educational printable, board game based on maths, logic and imagination.
