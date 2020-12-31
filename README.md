@@ -10,6 +10,7 @@
 - Difficulty: from 2/5 to 5/5 depending on the Action and the age of the Players.
 
 ## Assets
+- All assets are made for A4 sheet printing. Just open a generator page (Board, Tokens or Cards) and print the webpage in A4 size with no margins.
 - Board. One or more boards (you can have as many boards as you want). A Board is randomly generated and contains equal size Cells.
   Each Cell may be a number (0 \- 99) and/or a letter (A-Z) that is printed on a colored background. Examples [here](boards).
 - Playing Cards. 50 Cards each one with its own Action. Examples [here](cards).
