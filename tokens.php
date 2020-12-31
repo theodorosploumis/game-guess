@@ -4,9 +4,10 @@ include_once 'functions.php';
 
 $font_size = "20px";
 $bg_color = "white";
-$card_width = "280px";
+$token_width = "60px";
 $border_color = "whitesmoke";
-//$difficulty = 4;
+
+$tokens_number = 9;
 
 ?>
 
@@ -15,7 +16,7 @@ $border_color = "whitesmoke";
         <style type = "text/css">
             :root {
                 --bg-color: <?php print $bg_color; ?>;
-                --cell-width: <?php print $card_width; ?>;
+                --cell-width: <?php print $token_width; ?>;
                 --font-size: <?php print $font_size; ?>;
             }
 
@@ -35,26 +36,24 @@ $border_color = "whitesmoke";
                 flex-flow: wrap;
             }
 
-            .card {
+            .token {
                 flex-grow: 1;
                 flex-shrink: 1;
-                /*text-align: center;*/
-                padding: 20px 10px;
-                margin: 10px;
-                border-radius: 10px;
+                padding: 10px;
+                margin: 1px;
+                border-radius: 2px;
                 border: 1px solid var(--bg-color);
                 background: #f1ebdd;
                 width: var(--cell-width);
-                height: 160px;
+                height: var(--cell-width);
                 max-width: var(--cell-width);
-                /*page-break-inside: avoid;*/
             }
         </style>
     </head>
     <body>
         <div class="page">
             <div class="board">
-                <?php print GenerateCards(); ?>
+                <?php GenerateTokens($tokens_number); ?>
             </div>
         </div>
     </body>
