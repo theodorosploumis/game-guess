@@ -2,7 +2,7 @@
 
 global $actions;
 
-// ToDo: UUse a CSV to keep cards data
+// ToDo: Use a CSV to keep cards data
 $actions = [
     'maths' => [
         'is an even number',
@@ -24,11 +24,13 @@ $actions = [
         'has a letter which can be found on your last or first name',
         'has a letter or number you have never played before',
         'has a letter without curves (eg V, T, Y etc)',
+        'has a letter with curves (eg B, C, O, P etc)',
+        'has a letter that have a symmetric axis (horizontal or vertical, eg H, O, A etc)',
         'has a letter which comes after the last player cell or a number greater than the last player cell',
         'has a letter which comes before the last player cell or a number less than the last player cell',
     ],
     'position' => [
-        //    'is between a letter and a number',
+        'is between a letter and a number',
         //    'is 3 cells away (vertical or horizontal) from the last player\'s cell',
         'is on the same vertical line from the last player\'s cell',
         'is on the same horizontal line from the last player\'s cell',
