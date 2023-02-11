@@ -38,4 +38,4 @@ Advanced Game options:
 - Each Player plays his/her Action for 6 times and then the next one.
 
 ## License
-Copyright 2021 Theodoros Ploumis - All rights reserved.
+Copyright 2021 - now Theodoros Ploumis - All rights reserved.

@@ -20,7 +20,7 @@
             margin: 40px 0;
         }
 
-        h3 {
+        h3, h4 {
             text-align: center;
         }
 
@@ -87,6 +87,7 @@
     <div class="page">
         <div class="logo-wrapper"><a href="./"><img class="logo" src="./assets/logo.svg" alt="Logo"></a></div>
         <h3>A printable board game for maths, logic and imagination.</h3>
+        <h4><a href="https://github.com/theodorosploumis/game-guess">theodorosploumis/game-guess</a></h4>
         <hr>
         <ul>
             <li><a target="_blank" href="https://github.com/theodorosploumis/game-guess/blob/master/README.md">Rules/Gameplay</a></li>
@@ -124,7 +125,7 @@
             </div>
         </div>
         <hr>
-        <div class="copyright">Copyright 2021 Theodoros Ploumis - All rights reserved</div>
+        <div class="copyright">Copyright 2021 - <?php echo date("Y") ?> Theodoros Ploumis - All rights reserved</div>
     </div>
 </body>
 </html>

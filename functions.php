@@ -295,9 +295,11 @@ function GenerateCards() {
                 $prefix = "Draw ";
             }
 
+            $year = date("Y");
+            $owner = "Theodoros Ploumis";
             $html_action = "<div class='card-action'><label>Action:</label>" . $prefix . $action ."</div>";
             $html_type = "<div class='card-type type-".$label."' ><label>Type:</label>". $label ."</div>";
-            $html_copyright = "<div class='card-copyright'>&copy; Theodoros Ploumis 2021 - All rights reserved.</div>";
+            $html_copyright = "<div class='card-copyright'>&copy; " . $owner . " 2021 - " . $year . " - All rights reserved.</div>";
 
             $data = $html_action . $html_type . $html_copyright;
             $cards .= GenerateSingleCard($data);
